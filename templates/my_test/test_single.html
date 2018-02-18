@@ -1,0 +1,15 @@
+{% block content %}
+{% for t in questions %}
+    {{ t.my_test }}<br>
+    {{ t.question }}<br>
+    {{ t.answer_1 }}<br>
+    {{ t.answer_2 }}<br>
+    {{ t.answer_3 }}<br>
+        <p>Сравнить ответ</p>
+    <form method="POST" class="post-form">
+        {% csrf_token %}
+            {{ form.as_p }}
+        <button type="submit" class="sub_in">Отправить</button><hr>
+    </form>
+{% endfor %}
+{% endblock %}

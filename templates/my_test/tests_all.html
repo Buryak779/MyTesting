@@ -1,0 +1,5 @@
+{% for t in test %}
+    <a href="{% url 'my_test_single' pk=t.id %}">{{ t.title }}</a><br>
+    {{ t.created }}<br>
+    {{ t.user }}<br>
+{% endfor %}
