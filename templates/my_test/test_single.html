@@ -6,7 +6,7 @@
     {{ t.answer_2 }}<br>
     {{ t.answer_3 }}<br>
         <p>Сравнить ответ</p>
-    <form method="POST" class="post-form">
+    <form action="" method="POST" class="post-form">
         {% csrf_token %}
             {{ form.as_p }}
         <button type="submit" class="sub_in">Отправить</button><hr>
